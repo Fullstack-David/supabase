@@ -1,3 +1,45 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes flame {
+  0%,
+  100% {
+    text-shadow: 0 0 5px #ff8a00, 0 0 10px #ff8a00, 0 0 20px #ff8a00,
+      0 0 40px #ff8a00, 0 0 80px #ff8a00, 0 0 90px #ff8a00, 0 0 100px #ff8a00,
+      0 0 150px #ff8a00;
+  }
+  25% {
+    text-shadow: 0 0 5px #ff4500, 0 0 10px #ff4500, 0 0 20px #ff4500,
+      0 0 40px #ff4500, 0 0 80px #ff4500, 0 0 90px #ff4500, 0 0 100px #ff4500,
+      0 0 150px #ff4500;
+  }
+  50% {
+    text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 20px #ff0000,
+      0 0 40px #ff0000, 0 0 80px #ff0000, 0 0 90px #ff0000, 0 0 100px #ff0000,
+      0 0 150px #ff0000;
+  }
+  75% {
+    text-shadow: 0 0 5px #ff8a00, 0 0 10px #ff8a00, 0 0 20px #ff8a00,
+      0 0 40px #ff8a00, 0 0 80px #ff8a00, 0 0 90px #ff8a00, 0 0 100px #ff8a00,
+      0 0 150px #ff8a00;
+  }
+}
+
+.animate-flame {
+  animation: flame 3s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 1s infinite;
+}

@@ -6,7 +6,14 @@ export default function Conatct() {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-grow">
-        <h1 className="p-5 font-bold text-center text-[3rem]">Conatct Page</h1>
+        <div className="header">
+          <h1 className="p-5 font-bold text-center text-[3rem]">Anmäla</h1>
+        </div>
+        <div>
+          <form action="form">
+            <input type="text" placeholder="Namn" />
+          </form>
+        </div>
       </main>
       <Footer />
     </div>

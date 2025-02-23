@@ -10,6 +10,7 @@ const Footer = () => {
           href="https://www.instagram.com/p/CsD9Sz4oNLv/?img_index=1"
           target="_blank"
           rel="noopener noreferrer"
+          className="hover:scale-110 hover:opacity-100 transition-transform "
         >
           <FaInstagram className="w-6 h-6" />
         </a>
@@ -17,13 +18,24 @@ const Footer = () => {
           href="https://www.facebook.com/"
           target="_blank"
           rel="noopener noreferrer"
+          className="hover:scale-110 hover:opacity-100 transition-transform "
         >
           <FaFacebook className="w-6 h-6" />
         </a>
-        <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://github.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:scale-110 hover:opacity-100 transition-transform"
+        >
           <FaGithub className="w-6 h-6" />
         </a>
-        <a href="https://x.com/?mx=2">
+        <a
+          href="https://x.com/?mx=2"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:scale-110 hover:opacity-100 transition-transform"
+        >
           <FaTwitter className="w-6 h-6" />
         </a>
       </div>
