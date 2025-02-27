@@ -43,3 +43,34 @@
 .animate-bounce {
   animation: bounce 1s infinite;
 }
+
+.desktop-image {
+  width: 100%;
+  height: auto;
+  max-height: 90vh;
+  object-fit: cover;
+  opacity: 2;
+}
+
+.image {
+  border-radius: 10px;
+}
+
+.image:hover {
+  transition: 2s ease-in-out;
+  transform: scale(1.3);
+}
+
+@media (max-width: 768px) {
+  .main-div {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .desktop-image {
+    width: 100%;
+    height: 100vh;
+  }
+}

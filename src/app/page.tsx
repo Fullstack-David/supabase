@@ -1,13 +1,26 @@
+"use client";
+
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import { ChevronDown } from "@deemlol/next-icons";
+import { useRef } from "react";
 
 export default function Home() {
+  // handling scroll
+  const nextSectionRef = useRef<HTMLDivElement>(null);
+
+  const handleScroll = () => {
+    if (nextSectionRef.current) {
+      nextSectionRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    console.log("cliked");
+  };
+
   return (
     <div className="min-h-screen">
       <Navbar />
-      <main className="flex-grow relative">
+      <main className="flex-grow relative main-div">
         <div className="relative">
           <Image
             src="/visbyStrand.jpg"
@@ -24,22 +37,27 @@ export default function Home() {
               Welcome to our wedding
             </h2>
             <div className="absolute bottom-6 left-1/2 transform-translate-x-1/2 animate-bounce">
-              <ChevronDown size={40} color="#FFFFFF" />
+              <button className="chevronDown" onClick={handleScroll}>
+                <ChevronDown size={40} color="#FFFFFF" />
+              </button>
             </div>
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-4 p-5 justify-center items-center ">
-          <div className="flex items-center justify-center p-5 w">
+        <div
+          ref={nextSectionRef}
+          className="grid grid-cols-2 p-5 justify-center items-center main-div"
+        >
+          <div className="flex items-center justify-center p-5">
             <Image
               src="/gbg.jpg"
               alt="semester"
               width={300}
               height={300}
-              className="object-cover rounded-lg hover:scale-110 duration-300 ease-in-out"
+              className="image"
             />
           </div>
-          <p className="p-5 border-2 p-5 rounded-lg text-center max-w-3/4">
+          <p className="p-5 border-2 rounded-lg text-center ">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
             repunctio, cum nihil similique cupiditate odit quibusdam. In
             obcaecati, sapiente neque, voluptas, excepturi fugiat mollitia
@@ -49,8 +67,17 @@ export default function Home() {
             inventore
           </p>
         </div>
-        <div className="grid grid-cols-2 items-center justify-center p-5">
-          <p className="m-[2rem] border-2 p-5 rounded-lg text-center">
+        <div className="grid grid-cols-2 p-5 items-center justify-center main-div">
+          <div className="flex items-center justify-center p-5">
+            <Image
+              src="/ostersund.jpg"
+              alt="ostersund"
+              width={500}
+              height={500}
+              className="image"
+            />
+          </div>
+          <p className=" p-5 border-2 rounded-lg text-center">
             culpa amet quo esse quidem quibusdam dolor excepturi ex ut
             distinctio. Unde architecto natus id cum, assumenda culpa aliquam
             amet, ut quis laboriosam molestiae cupiditate reiciendis ratione
@@ -59,28 +86,19 @@ export default function Home() {
             numquam? Sapiente consequuntur sed, odit beatae voluptates
             reiciendis fuga, mollitia
           </p>
-          <div className="flex items-center justify-center p-5">
-            <Image
-              src="/ostersund.jpg"
-              alt="ostersund"
-              width={400}
-              height={400}
-              className="object-cover rounded-lg hover:scale-110 duration-300 ease-in "
-            />
-          </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-4 p-5 items-center">
+        <div className="grid grid-cols-2 p-5 items-center main-div">
           <div className="flex items-center justify-center p-5">
             <Image
               src="/midsummer.jpg"
               alt="unsplash"
               width={300}
               height={300}
-              className="object-cover rounded-lg hover:scale-110 duration-300 ease-in"
+              className="image"
             />
           </div>
-          <p className="m-[2rem] border-2 p-5 rounded-lg text-center">
+          <p className="p-5 border-2 rounded-lg text-center">
             quod corporis iste nostrum voluptatem ab quidem deleniti delectus
             nobis nihil quisquam! Ipsum ab laborum minima odio odit eveniet
             culpa ducimus labore ullam et unde quos, sint rem ut nesciunt, totam

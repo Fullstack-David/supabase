@@ -15,7 +15,7 @@ export default function Login() {
               <input
                 type="email"
                 className="w-full py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all p-1"
-                placeholder="Skriv ditt e-postadress"
+                placeholder="Email adress..."
               />
             </div>
             <div>

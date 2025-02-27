@@ -9,7 +9,7 @@ const Navbar = () => {
       <Link href="/about" className="hover:scale-110 duration-300 ease-in ">
         About
       </Link>
-      <Link href="/contact" className="hover:scale-110 duration-300 ease-in ">
+      <Link href="/register" className="hover:scale-110 duration-300 ease-in ">
         Register
       </Link>
       <Link href="/login" className="hover:scale-110 duration-300 ease-in  ">
